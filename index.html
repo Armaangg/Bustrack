@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Iframe with Refresh</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    :root {
+      --bg: #f4e3d7;
+      --text: #1a1a1a;
+      --card-bg: #fff7f0;
+      --highlight: #D2B48C;
+      --underline: #EADDCA;
+      --1: #EADDCA;
+      --2: #1a1a1a;
+    }
+    button {
+      margin: 0 0.5em;
+      background-color: var(--card-bg);
+      color: var(--text);
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0 0 5px var(--highlight);
+    }
+  </style>
+</head>
+<body>
+<br>
+  <button onclick="refreshIframe()">Refresh</button>
+  <br>
+  <br>
+  <iframe id="myIframe" src="https://www.apexsecure.in/ttrack/MTIzMTYjMTcwMSMxNzM3MDEzNTEyIzg3ODQ="></iframe>
+
+  <script>
+    function refreshIframe() {
+      const iframe = document.getElementById('myIframe');
+      iframe.src = iframe.src;
+    }
+  </script>
+
+</body>
+</html>
